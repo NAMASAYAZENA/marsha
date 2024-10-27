@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerita Kita</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Fungsi untuk mengarahkan ke gallery.html
+        function goToGallery() {
+            window.location.href = "gallery.html";
+        }
+
+        // Fungsi untuk menampilkan hati saat tombol ditekan
+        function showHearts() {
+            for (let i = 0; i < 20; i++) {
+                const heart = document.createElement("div");
+                heart.classList.add("heart");
+                heart.innerHTML = "❤️";
+                heart.style.left = `${Math.random() * 100}vw`;
+                heart.style.animationDuration = `${Math.random() * 3 + 2}s`;
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 5000);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">🏠 Home</a>
+        <a href="story.html">📖 Our Story</a>
+        <a href="gallery.html">🖼️ Our Gallery</a>
+    </div>
+
+    <div class="container">
+        <h1>Story</h1>
+        <p class="story">
+            Awalnya, kita kenal dari SMPN 11 TANGERANG, dia itu adik kelas saya. Kita cuma selisih 1 tahun, saya kelahiran 01 Mei 2005 dan dia 05 Juni 2006. Sebenernya saya udah tertarik sama dia dari SMP, cuma dulu otak saya cuma main doang, jadi ngga kepikiran buat pacar pacaran.<br><br>
+            Cerita sama Marsha bisa dibilang cukup unik, karena kita udah sering dekat tapi nanti sama-sama hilang, abis itu dekat lagi, terus hilang lagi wkwkwk. <br><br>
+            Singkat cerita..10 September 2024, saya ngeberaniin diri buat jemput dia. Saya langsung ke UPJ waktu itu, selang beberapa waktu, dia keluar dari restoran makanan fast food "McDonald's", waktu itu..cuma satu yang ada di pikiran saya "anjir"..gak tahu kenapa cuma itu yang saya pikirin pertama kali. Is it Love at first sight? azekk wkwkw.<br><br>
+            Yaudah deh..abis itu kita jadi lebih sering spend waktu bareng, dan di tanggal -14 September 2024- kita resmi berpacaran sampai sekarang dan seterusnya...yeayy.<br>
+            Crazy isn't it??? 4 hari doang cuyyy...sepertinya saya berbakat sekali meluluhkan hati wanita😎..bercanda sayang hehe..
+        </p>
+        <p class="story">Walaupun yaaa baru sebentar..u do a million simple things that bring joy to my life.</p>
+        
+        <!-- Tombol untuk Cinta dan Next -->
+        <button onclick="showHearts()">Tekan untuk Cinta</button>
+        <button onclick="goToGallery()">Next</button>
+    </div>
+</body>
+</html>

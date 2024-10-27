@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animasi Boneka Kelinci</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff; /* Latar belakang yang cerah */
+            overflow: hidden; /* Menghindari scrollbar */
+            font-family: 'Comic Sans MS', cursive; /* Font lucu */
+        }
+
+        .bunny {
+            width: 100px;
+            height: 100px;
+            background-color: #ffcccb; /* Warna badan kelinci */
+            position: relative;
+            animation: jump 1s ease-in-out infinite;
+            border-radius: 50% 50% 40% 40%; /* Membentuk kelinci */
+        }
+
+        @keyframes jump {
+            0%, 100% {
+                bottom: 0; /* Posisi awal */
+            }
+            50% {
+                bottom: 100px; /* Posisi tertinggi */
+            }
+        }
+
+        .ear {
+            width: 20px;
+            height: 50px;
+            background-color: #ff69b4; /* Warna telinga */
+            position: absolute;
+            top: -30px; /* Posisi telinga di atas kelinci */
+            border-radius: 20px;
+        }
+
+        .ear.left {
+            left: 10px; /* Posisi telinga kiri */
+            transform: rotate(-20deg);
+        }
+
+        .ear.right {
+            right: 10px; /* Posisi telinga kanan */
+            transform: rotate(20deg);
+        }
+
+        .eye {
+            width: 10px;
+            height: 10px;
+            background-color: #000; /* Warna mata */
+            border-radius: 50%; /* Bentuk bulat */
+            position: absolute;
+            top: 30px; /* Posisi mata */
+        }
+
+        .eye.left {
+            left: 30px; /* Posisi mata kiri */
+        }
+
+        .eye.right {
+            right: 30px; /* Posisi mata kanan */
+        }
+
+        .nose {
+            width: 10px;
+            height: 5px;
+            background-color: #ff69b4; /* Warna hidung */
+            position: absolute;
+            left: 40px; /* Posisi hidung */
+            top: 50px; /* Posisi hidung */
+            border-radius: 50%; /* Bentuk bulat */
+        }
+
+        .love-text {
+            margin-top: 20px;
+            font-size: 24px; /* Ukuran font */
+            color: #ff1493; /* Warna teks */
+            animation: sway 1s ease-in-out infinite; /* Animasi gerakan */
+        }
+
+        @keyframes sway {
+            0%, 100% {
+                transform: translateX(0); /* Posisi awal */
+            }
+            50% {
+                transform: translateX(10px); /* Gerakan ke kanan */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bunny">
+        <div class="ear left"></div>
+        <div class="ear right"></div>
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="nose"></div>
+    </div>
+    <div class="love-text">I Love You! 🐰❤️</div>
+</body>
+</html>

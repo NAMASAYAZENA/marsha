@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Cinta untuk Kamu</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Mengecek apakah ini adalah kunjungan pertama kali dalam sesi ini
+        document.addEventListener("DOMContentLoaded", function() {
+            if (!sessionStorage.getItem("visitedLoveLetter")) {
+                // Tandai kunjungan pertama kali ke loveletter dan arahkan ke loveletter.html
+                sessionStorage.setItem("visitedLoveLetter", "true");
+                window.location.href = "loveletter.html";
+            }
+        });
+
+        // Fungsi untuk mengarahkan ke story.html
+        function goToStory() {
+            window.location.href = "story.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">🏠 Home</a>
+        <a href="story.html">📖 Our Story</a>
+        <a href="gallery.html">🖼️ Our Gallery</a>
+    </div>
+
+    <div class="container">
+        <h1>Untuk Marsha</h1>
+        <p class="intro">Dari Zena Buat ⁠Lidwina Marshanda Wardhana .</p>
+        
+        <div class="letter">
+            <p>Cayangkuu,</p>
+            <p>Aku gatau sih ini bikin apa wkwkwkw.</p>
+            <p>Tapi aku cuma mau bilang kalo aku tuh bersyukur banget punya kamu.</p>
+            <p>aku ngerasa dihargain banget semenjak sama kamu.</p>
+            <p>aku ngga pernah ngerasain yang kaya begini dari dulu.</p>
+            <p>tapi semenjak sama kamu aku jadi paham gimana caranya sayang sama orang.</p>
+            <p>jangan pernah bosen sama aku yaaa!!!</p>
+            <p>semoga kita berdua bahagia selalu..</p>
+            <p>ur boyfie,</p>
+            <p><strong>-zena-</strong></p>
+        </div>
+
+        <!-- Tombol Klik untuk Cinta berada di atas tombol Next -->
+        <button onclick="showHearts()">Klik untuk Cinta</button>
+        <button onclick="goToStory()">Next</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
